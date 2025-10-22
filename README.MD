@@ -35,9 +35,6 @@ This project implements a hybrid log classification system, combining three comp
 3. **`resources/`**:
    - This folder contains resource files such as test CSV files, output files, images, etc.
 
-4. **Root Directory**:
-   - Contains the FastAPI server code (`server.py`).
-
 ---
 
 ## Setup Instructions
@@ -49,23 +46,17 @@ This project implements a hybrid log classification system, combining three comp
    pip install -r requirements.txt
    ```
 
-2. **Run the FastAPI Server**:
-   To start the server, use the following command:
+2. **Run the classify.py file**:
+   To run the file, use the following command:
 
    ```bash
-   uvicorn server:app --reload
+   python classify.py
    ```
-
-   Once the server is running, you can access the API at:
-   - `http://127.0.0.1:8000/` (Main endpoint)
-   - `http://127.0.0.1:8000/docs` (Interactive Swagger documentation)
-   - `http://127.0.0.1:8000/redoc` (Alternative API documentation)
-
 ---
 
 ## Usage
 
-Upload a CSV file containing logs to the FastAPI endpoint for classification. Ensure the file has the following columns:
+Upload a CSV file containing logs for classification. Ensure the file has the following columns:
 - `source`
 - `log_message`
 
